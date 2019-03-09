@@ -21,11 +21,11 @@ To begin, you have to make sure that all the dependencies should be install on y
 For CPU :
 
 Install tensorflow on your CPU system using below command.       
-		Pip install tensorflow
+				Pip install tensorflow
 
 For GPU:
 Install tensorflow-gpu on your GPU system using below command.         
-		Pip install tensorflow-gpu
+				Pip install tensorflow-gpu
 
 follow below link to install tensorflow properly in your respective OS version on system.             
 
