@@ -1,12 +1,12 @@
-##Tensorflow Object Detection
+# Tensorflow Object Detection
 
 Object Detection Model Training using Tensorflow.
 
-#Introduction
+## Introduction
 
 This tutorial is introduction about Tensorflow Object Detection API.This API can be used to detect , with bounding boxes, objects in image or video using some of the pre-trained models.Using this pre-trained model you can train you image for a custom object detection.
 
-#Requirements
+## Requirements
 
 • Windows/Ubuntu
 • CPU or GPU (Ex:NVIDIA-CUDA-Enable GeForce)
@@ -14,7 +14,7 @@ This tutorial is introduction about Tensorflow Object Detection API.This API can
 • Python v2.7 or Python > v3.0
 • OpenCV > v4.0
 
-#Dependencies
+## Dependencies
 
 To begin, you have to make sure that all the dependencies should be install on your system.
 
@@ -71,7 +71,7 @@ Now, from the models directory , you can use protoc command.
 		object_detection/protos/*.proto –python_out=.
 
 
-#Stages to train a model:
+## Stages to train a model:
 
 		1.Data Collection.
 		2.Annoation.
@@ -82,14 +82,14 @@ Now, from the models directory , you can use protoc command.
 		7.Frozen model generation.
 		8.Inference.
 
-#1. Data Collection:
+## 1. Data Collection:
 
 Collect a few hundred images that contain custom object.
 ( collect the data as much as possible)
 Collect the data with various possible case (eg: captured with different angle based on your use case,with various distance from the object.)
 Filter the data ( remove blur image ,unnecessary non frontal images)
 
-#2. Annotation or labeling
+## 2. Annotation or labeling
 
 I will recommend LabelImg (https://github.com/tzutalin/labelImg)
 is graphical image annotation tool.It is written in python and use Qt for it’s graphical interface.
@@ -112,7 +112,7 @@ iii) click on save with Pascal voc formate and then next to get next image.
 
 ![](images/labelImage.png)
 
-#3.Train and test set
+## 3.Train and test set
 
 Make k-fold of your all data to train and test set.
 Copy 10% (or 30%) of total data and their annotation to the /test folder and remaining 90% (or 70%) of total data and their annotation to /train folder.
@@ -128,7 +128,7 @@ Python xml_to_csv.py
 ![](images/xml_to_csv.png)
 
 
-#4.Generate TFRecord
+## 4.Generate TFRecord
 
 
 Clone tensorflow object detection model API.
@@ -174,7 +174,7 @@ From tensorflow/models/ directory run below command to generate train and test t
 In your /data directory , you should have train.record and test.record.
 
 
-#Training the model:
+## Training the model:
 
 We will train our object detection model to detect our custom object.To do this we need the images , matching tfRecord for training and testing data.
 
@@ -211,6 +211,7 @@ In the configuration file, you need to search for all above parameter and change
 Here is your complete configuration file:
 
 '''
+
 # SSD with Mobilenet v1, configured for the mac-n-cheese dataset.
 # Users should configure the fine_tune_checkpoint field in the train config as
 # well as the label_map_path and input_path fields in the train_input_reader and
@@ -415,7 +416,7 @@ item {
 
 
 
-#Training using Train.py script: 
+## Training using Train.py script: 
 
 This is used to train DetectionModels.There are two ways to configuring the training job.
 
@@ -457,7 +458,7 @@ To run the tensorboard,from models/reseach/object_detection,
 
 We need to export the graph and then test the model.
 
-#Testing Custom Object Detector – Tensorflow Object Detection API
+## Testing Custom Object Detector – Tensorflow Object Detection API
 
 We are going to test our trained model.In order to do that we need to export the inference graph.
 
@@ -514,5 +515,4 @@ Let’s apply for the testing of streaming video or webcam.
 You have to install opencv library for this and run the script.
 
 python3 test.py
-
 
