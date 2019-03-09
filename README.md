@@ -8,11 +8,11 @@ This tutorial is introduction about Tensorflow Object Detection API.This API can
 
 ## Requirements
 
-• Windows/Ubuntu
-• CPU or GPU (Ex:NVIDIA-CUDA-Enable GeForce)
-• Tensorflow-CPU/GPU Version
-• Python v2.7 or Python > v3.0
-• OpenCV > v4.0
+• Windows/Ubuntu     
+• CPU or GPU (Ex:NVIDIA-CUDA-Enable GeForce)      
+• Tensorflow-CPU/GPU Version         
+• Python v2.7 or Python > v3.0        
+• OpenCV > v4.0        
 
 ## Dependencies
 
