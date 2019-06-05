@@ -33,7 +33,7 @@ follow below link to install tensorflow properly in your respective OS version o
 
 		 https://www.tensorflow.org/install/
 
-Beyand this , install other python dependencies.
+Beyond this , install other python dependencies.
 
 		Pip install pillow
 		pip install lxml
